@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:project/src/components/divider.dart';
 
 class AuthScreen extends StatelessWidget {
   @override
@@ -11,65 +12,62 @@ class AuthScreen extends StatelessWidget {
         middle: Text("Авторизация"),
       ),
       child: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CupertinoTextField(
-                placeholder: "Логин или почта",
-                decoration: BoxDecoration(
-                  color: CupertinoColors.white,
-                ),
-                padding: const EdgeInsets.symmetric(vertical: 19, horizontal: 16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CupertinoTextField(
+              placeholder: "Логин или почта",
+              decoration: BoxDecoration(
+                color: CupertinoColors.white,
               ),
-              Container(
-                height: 1,
-                color: Color(0xFFE0E6ED),
-                margin: const EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(vertical: 19, horizontal: 16),
+            ),
+            customDivider(),
+            CupertinoTextField(
+              placeholder: "Пароль",
+              decoration: BoxDecoration(
+                color: CupertinoColors.white,
               ),
-              CupertinoTextField(
-                placeholder: "Пароль",
-                decoration: BoxDecoration(
-                  color: CupertinoColors.white,
-                ),
-                padding: const EdgeInsets.symmetric(vertical: 19, horizontal: 16),
-              ),
-              SizedBox(
-                height: 32,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: CupertinoButton(
-                  padding: const EdgeInsets.symmetric(vertical: 20),
-                  color: Color(0xFF4631D2),
-                  child: Text(
-                    'Войти',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
+              padding: const EdgeInsets.symmetric(vertical: 19, horizontal: 16),
+            ),
+            SizedBox(
+              height: 32,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: CupertinoButton(
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                color: Color(0xFF4631D2),
+                child: Text(
+                  'Войти',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
                   ),
-                  onPressed: () {},
                 ),
+                onPressed: () {},
               ),
-              SizedBox(
-                height: 19,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: CupertinoButton(
-                  padding: const EdgeInsets.symmetric(vertical: 20),
-                  color: Color(0xFF4631D2),
-                  child: Text(
-                    'Зарегистрироваться',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
+            ),
+            SizedBox(
+              height: 19,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: CupertinoButton(
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                color: Color(0xFF4631D2),
+                child: Text(
+                  'Зарегистрироваться',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
                   ),
-                  onPressed: () {},
                 ),
+                onPressed: () {},
               ),
-            ],
-          )),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
