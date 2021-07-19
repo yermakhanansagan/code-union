@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:project/src/components/divider.dart';
+import 'package:project/src/router/router_const.dart';
+import 'package:project/src/screens/registration/registration_screen.dart';
 
 class AuthScreen extends StatelessWidget {
   @override
@@ -62,7 +64,9 @@ class AuthScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, RegisterRoute);
+                },
               ),
             ),
           ],
