@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:project/src/router/router_const.dart';
 import 'package:project/src/screens/auth/auth_screen.dart';
-import 'package:project/src/screens/registration/registration_screen.dart';
+import 'package:project/src/screens/auth/registration_screen.dart';
 
 class AppRouter {
   static Route generateRoute(RouteSettings routeSettings) {
