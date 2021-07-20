@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:project/src/screens/profile/profile_screen.dart';
 import 'package:project/src/screens/timeline/timeline_screen.dart';
 
 import '../auth/auth_screen.dart';
@@ -44,7 +45,7 @@ class MainScreen extends StatelessWidget {
               case 2:
                 return AuthScreen();
               case 3:
-                return RegistrationScreen();
+                return ProfileScreen();
               default:
                 return TimelineScreen();
             }

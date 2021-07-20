@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:project/src/components/search_text_field.dart';
+import 'package:project/src/constants/app_color.dart';
 import 'package:project/src/constants/app_paddings.dart';
+import 'package:project/src/constants/text_styles.dart';
 import 'package:project/src/data/dummy_data.dart';
 
 class TimelineScreen extends StatelessWidget {
@@ -17,14 +20,7 @@ class TimelineScreen extends StatelessWidget {
                 SizedBox(
                   height: 33,
                 ),
-                CupertinoTextField(
-                  prefix: Padding(
-                    padding: const EdgeInsets.only(left: 12),
-                    child: Icon(CupertinoIcons.search),
-                  ),
-                  placeholder: "Поиск",
-                  padding: const EdgeInsets.all(12),
-                ),
+                SearchTextField(),
                 SizedBox(
                   height: 20,
                 ),
@@ -65,20 +61,15 @@ class TimelineScreen extends StatelessWidget {
                                   children: [
                                     Text(
                                       shoppingCenter.name,
-                                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                      style: AppTextStyles.headline2,
                                     ),
                                     Text(
                                       shoppingCenter.description,
-                                      style: TextStyle(
-                                          fontSize: 13,
-                                          color: Color(0xFF929292)),
-                                    ),
+                                      style: AppTextStyles.description2),
                                     Text(
                                       shoppingCenter.address,
-                                      style: TextStyle(
-                                          fontSize: 13,
-                                          color: Color(0xFF929292)),
-                                    )
+                                      style: AppTextStyles.description2),
+
                                   ],
                                 ),
                               ),
@@ -100,3 +91,5 @@ class TimelineScreen extends StatelessWidget {
     );
   }
 }
+
+
