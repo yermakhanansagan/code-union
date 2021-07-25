@@ -59,9 +59,8 @@ class _AuthScreenState extends State<AuthScreen> {
                         'password': passwordController.text,
                       },
                     );
-                    TokensModel tokensModel = TokensModel(
-                      access: response.data['tokens']['accessToken'],
-                      refresh: response.data['tokens']['refreshToken'],
+                    TokensModel tokensModel = TokensModel.fromJson(
+                      response.data['tokens'],
                     );
 
                     Box tokensBox = Hive.box("tokens");
