@@ -1,10 +1,12 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:hive/hive.dart';
 import 'package:project/src/components/custom_button.dart';
 import 'package:project/src/components/custom_text_field.dart';
 import 'package:project/src/components/custom_divider.dart';
 import 'package:project/src/constants/app_color.dart';
 import 'package:project/src/constants/app_paddings.dart';
+import 'package:project/src/data/models/tokens_model.dart';
 import 'package:project/src/router/router_const.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -57,9 +59,17 @@ class _AuthScreenState extends State<AuthScreen> {
                         'password': passwordController.text,
                       },
                     );
+                    TokensModel tokensModel = TokensModel(
+                      access: response.data['tokens']['accessToken'],
+                      refresh: response.data['tokens']['refreshToken'],
+                    );
+
+                    Box tokensBox = Hive.box("tokens");
+                    tokensBox.put('access', tokensModel.access);
+                    tokensBox.put('refresh', tokensModel.refresh);
+
                     Navigator.pushReplacementNamed(context, MainRoute);
 
-                    print(response.data['tokens']['accessToken']);
                   } on DioError catch (e) {
                     showCupertinoModalPopup(
                       context: context,

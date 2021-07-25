@@ -36,21 +36,16 @@ class RegistrationScreen extends StatelessWidget {
                   placeholder: "Почта",
                 ),
                 CustomDivider(),
-                CupertinoTextField(
-                  placeholder: "Пароль",
-                  decoration: BoxDecoration(
-                    color: CupertinoColors.white,
-                  ),
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 19, horizontal: 16),
+                CustomTextField(
                   suffix: CupertinoButton(
+                    onPressed: () {},
                     child: SvgPicture.asset(
                       "assets/icons/eye_slash.svg",
                       width: 24,
                       height: 19,
                     ),
-                    onPressed: () {},
                   ),
+                  placeholder: "Пароль",
                 ),
               ],
             ),
