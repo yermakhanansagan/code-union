@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project/src/constants/app_color.dart';
 import 'package:project/src/router/router.dart';
+import 'package:project/src/router/router_const.dart';
 import 'package:project/src/screens/auth/auth_screen.dart';
 import 'package:project/src/screens/auth/registration_screen.dart';
 import 'package:project/src/screens/main_screen/main_screen.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: CupertinoThemeData(
           primaryColor: CupertinoColors.black,
           scaffoldBackgroundColor: AppColor.scaffoldBackground),
-      home: MainScreen(),
+      initialRoute: AuthRoute,
     );
   }
 }
