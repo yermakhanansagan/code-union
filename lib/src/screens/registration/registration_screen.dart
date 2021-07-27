@@ -17,7 +17,6 @@ class RegistrationScreen extends StatelessWidget {
     final TextEditingController passwordController = TextEditingController();
     final TextEditingController loginController = TextEditingController();
     final TextEditingController phoneController = TextEditingController();
-
     return CupertinoPageScaffold(
       resizeToAvoidBottomInset: false,
       navigationBar: CupertinoNavigationBar(
@@ -40,6 +39,7 @@ class RegistrationScreen extends StatelessWidget {
                 CustomTextField(
                   placeholder: "Телефон",
                   controller: phoneController,
+                  keyboardType: TextInputType.phone,
                 ),
                 CustomDivider(),
                 CustomTextField(
@@ -58,6 +58,7 @@ class RegistrationScreen extends StatelessWidget {
                   ),
                   placeholder: "Пароль",
                   controller: passwordController,
+                  obscureText: true,
                 ),
               ],
             ),
@@ -66,10 +67,9 @@ class RegistrationScreen extends StatelessWidget {
               child: BlocConsumer<SignUpBloc, SignUpState>(
                 listener: (context, state) {
                   // TODO: implement listener
-                  if(state is SignUpLoaded){
+                  if (state is SignUpLoaded) {
                     Navigator.pushReplacementNamed(context, MainRoute);
-                  }
-                  else if(state is SignUpFailed){
+                  } else if (state is SignUpFailed) {
                     showCupertinoModalPopup(
                       context: context,
                       builder: (context) {
@@ -109,4 +109,5 @@ class RegistrationScreen extends StatelessWidget {
       ),
     );
   }
+
 }
