@@ -1,4 +1,4 @@
-import 'package:project/src/data/model.dart';
+import 'package:project/src/data/models/model.dart';
 
 List<ShoppingCenter> shoppingCenters = [
   ShoppingCenter("Esentai Mall", "Один из крупнейших торговых центров в ...",
