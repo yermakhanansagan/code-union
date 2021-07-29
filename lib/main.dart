@@ -5,7 +5,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:project/src/constants/app_color.dart';
 import 'package:project/src/router/router.dart';
 import 'package:project/src/router/router_const.dart';
-import 'package:project/src/screens/auth/auth_screen.dart';
+
 
 void main() async{
   await Hive.initFlutter();
