@@ -11,21 +11,26 @@ part 'log_in_event.dart';
 part 'log_in_state.dart';
 
 class LogInBloc extends Bloc<LogInEvent, LogInState> {
-  LogInBloc() : super(LogInInitial());
-  final Dio dio = Dio();
+  final Dio dio;
+
+  LogInBloc({
+    required this.dio,
+  }) : super(LogInInitial());
+
   final Box tokensBox = Hive.box('tokens');
+
   @override
   Stream<LogInState> mapEventToState(
     LogInEvent event,
   ) async* {
     // TODO: implement mapEventToState
     if (event is LogInPressed) {
-
       yield LogInLoading();
-      print('Я работаю и отправляю запрос на сервер!!');
+
+
       try {
         Response response = await dio.post(
-          'http://api.codeunion.kz/api/v1/auth/login',
+          'auth/login',
           data: {
             'email': event.email,
             'password': event.password,
@@ -42,7 +47,7 @@ class LogInBloc extends Bloc<LogInEvent, LogInState> {
       } on DioError catch (e) {
         yield LogInFailed(message: 'Неправильный логин или пароль');
         throw e;
-      }catch (e) {
+      } catch (e) {
         yield LogInFailed(message: 'Произошла ошибка');
         throw e;
       }

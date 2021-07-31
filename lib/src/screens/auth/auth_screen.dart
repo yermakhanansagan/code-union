@@ -1,12 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:project/src/components/custom_button.dart';
-import 'package:project/src/components/custom_text_field.dart';
-import 'package:project/src/components/custom_divider.dart';
-import 'package:project/src/constants/app_color.dart';
-import 'package:project/src/constants/app_paddings.dart';
-import 'package:project/src/router/router.dart';
-
+import 'package:project/src/common/components/custom_button.dart';
+import 'package:project/src/common/components/custom_divider.dart';
+import 'package:project/src/common/components/custom_text_field.dart';
+import 'package:project/src/common/constants/app_color.dart';
+import 'package:project/src/common/constants/app_paddings.dart';
 import 'package:project/src/router/router_const.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -45,6 +43,7 @@ class _AuthScreenState extends State<AuthScreen> {
             CustomTextField(
               controller: passwordController,
               placeholder: "Пароль",
+              obscureText: true,
             ),
             SizedBox(
               height: 32,
