@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:project/src/constants/app_color.dart';
-import 'package:project/src/constants/text_styles.dart';
+import 'package:project/src/common/constants/text_styles.dart';
 
 class ProfileDescription extends StatelessWidget {
   final String imagePath;

@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:project/src/components/custom_button.dart';
-import 'package:project/src/components/custom_text_field.dart';
-import 'package:project/src/components/custom_divider.dart';
-import 'package:project/src/constants/app_color.dart';
-import 'package:project/src/constants/app_paddings.dart';
+import 'package:project/src/common/components/custom_button.dart';
+import 'package:project/src/common/components/custom_divider.dart';
+import 'package:project/src/common/components/custom_text_field.dart';
+import 'package:project/src/common/constants/app_color.dart';
+import 'package:project/src/common/constants/app_paddings.dart';
 import 'package:project/src/router/router_const.dart';
 import 'package:project/src/screens/registration/bloc/sign_up_bloc.dart';
 

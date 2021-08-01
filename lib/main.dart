@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
-import 'package:project/src/constants/app_color.dart';
+import 'package:project/src/common/constants/app_color.dart';
+import 'package:project/src/common/dependencies/injection_container.dart';
 import 'package:project/src/router/router.dart';
 import 'package:project/src/router/router_const.dart';
 
@@ -37,6 +37,7 @@ class _MyAppState extends State<MyApp> {
     if(tokensBox.get("access") != null || tokensBox.get("refresh") != null){
       initialRoute = MainRoute;
     }
+    initGetIt();
     super.initState();
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:project/src/constants/app_color.dart';
-import 'package:project/src/constants/app_paddings.dart';
+import 'package:project/src/common/constants/app_color.dart';
+import 'package:project/src/common/constants/app_paddings.dart';
 
 
 class CustomDivider extends StatelessWidget {

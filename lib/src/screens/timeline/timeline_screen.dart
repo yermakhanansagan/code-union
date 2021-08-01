@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:project/src/components/search_text_field.dart';
-import 'package:project/src/constants/app_color.dart';
-import 'package:project/src/constants/app_paddings.dart';
-import 'package:project/src/constants/text_styles.dart';
+import 'package:project/src/common/components/search_text_field.dart';
+import 'package:project/src/common/constants/app_paddings.dart';
+import 'package:project/src/common/constants/text_styles.dart';
 import 'package:project/src/data/dummy_data.dart';
 
 class TimelineScreen extends StatelessWidget {

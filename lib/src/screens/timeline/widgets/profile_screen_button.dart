@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:project/src/constants/app_color.dart';
+import 'package:project/src/common/constants/app_color.dart';
 
 class ProfileScreenButton extends StatelessWidget {
   final String labelText;
